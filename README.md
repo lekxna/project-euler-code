@@ -1,5 +1,6 @@
-# project-euler-code
-I will start making and uploading challenging project euler solutions
+# project-euler-code 1
+this is the first project euler code im showing
+
 
 using System;
 namespace ConsoleApp1
