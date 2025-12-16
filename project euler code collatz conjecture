@@ -1,0 +1,57 @@
+using System;
+using System.Diagnostics.Metrics;
+using System.Xml.Serialization;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 1;
+            int max = 0;
+            for (int i = 1; i < 1000000; i++)
+            {
+                int colatsamount = 0;
+                colatsamount = collatzconjecture(i, colatsamount);
+                if (colatsamount > max)
+                {
+                    max = colatsamount;
+                    n = i;
+                }
+            }
+            Console.WriteLine("The number " + n + " produces the longest Collatz sequence with " + max + " terms.");
+        }
+
+        static int collatzconjecture(int n, int colatsamount)
+        {
+         colatsamount = 0;
+            while (n != 1)
+            {
+                Console.Write(n + " ");
+                if (n % 2 == 0)
+                {
+                    n = n / 2;
+                    colatsamount++;
+                }
+                else
+                {
+                    n = 3 * n + 1;
+                    colatsamount++;
+                }
+            }
+            Console.WriteLine(colatsamount);
+        
+        return colatsamount;
+        
+        
+        
+        
+       
+        }
+    }
+}
+
+        
+        
+        
